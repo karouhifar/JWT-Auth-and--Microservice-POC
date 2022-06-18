@@ -7,7 +7,7 @@
         "start": "node src/index.js main",
         "dev": "nodemon src/index.js main --watch",
         "dev-2": "nodemon src/index-server-2.js  main --watch",
-        "build": "babel src/ -d lib/",
+        "build": "babel src/ -d dist/",
         "lint": "eslint --config .eslintrc.js src/**",
         "prettier": "prettier --config .prettierrc.js --write \"src/**/*.js\"",
         "prepublish": "npm run build",
@@ -17,6 +17,7 @@
     "author": "Kamyab Rouhifar",
     "license": "ISC",
     "dependencies": {
+        "bcrypt": "^5.0.1",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
         "jsonwebtoken": "^8.5.1",
