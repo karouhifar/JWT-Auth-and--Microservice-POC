@@ -1,0 +1,33 @@
+{
+    "name": "jwt-auth",
+    "version": "0.0.1",
+    "description": "JWT auth",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js main",
+        "dev": "npm run lint && nodemon src/index.js main --watch",
+        "serve": "npm run lint && firebase emulators:start --only functions",
+        "deploy": "npm run lint && firebase deploy --only functions",
+        "dev-2": "nodemon src/index-server-2.js  main --watch",
+        "lint": "eslint --config .eslintrc.js src/**",
+        "prettier": "prettier --config .prettierrc.js --write \"src/**/*.js\""
+    },
+    "keywords": [],
+    "author": "Kamyab Rouhifar",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "jsonwebtoken": "^8.5.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.18.0",
+        "nodemon": "^2.0.16",
+        "prettier": "2.7.1"
+    },
+    "engines": {
+        "node": "16"
+    }
+}
