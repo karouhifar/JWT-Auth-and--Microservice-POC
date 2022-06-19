@@ -7,7 +7,7 @@
         "start": "node src/index.js main",
         "dev": "npm run lint && nodemon src/index.js main --watch",
         "serve": "npm run lint && firebase emulators:start --only functions",
-        "deploy": "npm run lint && firebase deploy --only functions",
+        "deploy": "npm run lint && firebase deploy --only functions --allow-unauthenticated",
         "dev-2": "nodemon src/index-server-2.js  main --watch",
         "lint": "eslint --config .eslintrc.js src/**",
         "prettier": "prettier --config .prettierrc.js --write \"src/**/*.js\""
@@ -17,8 +17,11 @@
     "license": "ISC",
     "dependencies": {
         "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
+        "firebase-functions": "^3.21.2",
+        "helmet": "^5.1.0",
         "jsonwebtoken": "^8.5.1",
         "uuid": "^8.3.2"
     },
